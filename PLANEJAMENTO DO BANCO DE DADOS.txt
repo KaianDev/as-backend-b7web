@@ -1,0 +1,26 @@
+PLANEJAMENTO DO BANCO DE DADOS
+
+- EVENTOS
+- GRUPOS
+- PESSOAS
+
+
+events
+- id INT PK AUTO_INCREMENT
+- status BOOLEAN default=false
+- title STRING
+- description STRING
+- grouped BOOLEAN default=false
+
+eventsGroups
+- id INT PK AUTO_INCREMENT
+- id_event RELACIONADO A (events.id)
+- name STRING
+
+eventPeople 
+- id INT PK AUTO_INCREMENT
+- id_event RELACIONADO A (events.id)
+- id_group RELACIONADO A (eventsGroups.id)
+- name SCRIPT
+- cpg STRING
+- matched STRING default=""
